@@ -1,0 +1,308 @@
+/* ===========================================================
+   Second Pass — editorial theme, v2
+   Navy background, modern grotesk display, pink accent.
+   =========================================================== */
+
+:root {
+  --navy: #1B2340;
+  --navy-deep: #141A30;
+  --paper: #F5F1E8;
+  --slate: #9AA0C2;
+  --pink: #F2568B;
+  --rule: rgba(245, 241, 232, 0.14);
+  --max-w: 760px;
+  --margin: clamp(20px, 6vw, 64px);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--paper);
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: "Bricolage Grotesque", -apple-system, sans-serif;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+}
+
+h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); font-weight: 600; }
+h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); font-style: italic; font-weight: 500; }
+h3 { font-size: 1.15rem; font-weight: 600; font-family: "Work Sans", sans-serif; color: var(--paper); }
+
+p { margin: 0 0 1.1em; max-width: 62ch; color: var(--paper); }
+p em { font-style: italic; color: var(--pink); }
+
+a { color: var(--paper); text-underline-offset: 4px; text-decoration-color: var(--pink); }
+a:hover { color: var(--pink); }
+
+a:focus-visible, .btn:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--margin);
+}
+
+/* ---------- header ---------- */
+
+header.site {
+  padding: 32px var(--margin) 0;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--paper);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wordmark-icon { width: 26px; height: 26px; flex-shrink: 0; }
+
+nav.site-nav { display: flex; gap: 26px; }
+nav.site-nav a {
+  font-size: 0.92rem;
+  color: var(--slate);
+  text-decoration: none;
+  padding: 8px 2px;
+  display: inline-block;
+}
+nav.site-nav a:hover, nav.site-nav a[aria-current="page"] { color: var(--pink); }
+
+/* ---------- hero ---------- */
+
+.hero {
+  padding: 72px var(--margin) 44px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.hero .eyebrow {
+  color: var(--pink);
+  font-size: 0.95rem;
+  font-style: italic;
+  font-family: "Bricolage Grotesque", sans-serif;
+  margin-bottom: 14px;
+}
+
+/* the big animated name */
+.name-hero {
+  position: relative;
+  display: inline-block;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800;
+  font-size: clamp(3.2rem, 13vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75em;
+  color: var(--paper);
+}
+
+.name-hero .letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(36px);
+  animation: letter-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes letter-in {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .name-hero .letter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* the edit mark: strike, then caret, drawn in over "Second Pass" after the letters land */
+.name-hero .edit-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.name-hero .edit-overlay .strike {
+  fill: none;
+  stroke: var(--slate);
+  stroke-opacity: 0.6;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: sp-draw 0.4s ease-out 1.25s forwards;
+}
+
+.name-hero .edit-overlay .caret {
+  fill: none;
+  stroke: var(--pink);
+  stroke-width: 9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: sp-draw 0.35s cubic-bezier(0.65, 0, 0.35, 1) 1.65s forwards;
+}
+
+@keyframes sp-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .name-hero .edit-overlay .strike,
+  .name-hero .edit-overlay .caret {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+.hero .tagline {
+  font-size: 1.3rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 500;
+  color: var(--paper);
+  margin-bottom: 0.6em;
+}
+
+.hero .lede { font-size: 1.15rem; color: var(--slate); max-width: 52ch; }
+
+/* ---------- rule / section ---------- */
+
+.rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+
+section.block {
+  padding: 48px var(--margin);
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+section.block.tight { padding-top: 24px; padding-bottom: 24px; }
+
+/* ---------- revision log → "Latest" feed ---------- */
+
+.log-item {
+  border-top: 1px solid var(--rule);
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+}
+
+.log-item:last-child { border-bottom: 1px solid var(--rule); }
+
+.log-item .status {
+  font-size: 0.82rem;
+  font-style: italic;
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: var(--slate);
+  padding-top: 0.2em;
+}
+
+.log-item .status.live { color: var(--pink); }
+
+.log-item h3 { margin-bottom: 8px; }
+.log-item p { margin-bottom: 10px; color: var(--slate); }
+.log-item a.visit { font-size: 0.95rem; color: var(--pink); text-decoration-color: var(--pink); }
+
+@media (max-width: 480px) {
+  .log-item { grid-template-columns: 1fr; gap: 6px; }
+}
+
+/* ---------- principles → pull-quote style ---------- */
+
+.principles { margin: 0; padding: 0; list-style: none; }
+.principles li {
+  border-top: 1px solid var(--rule);
+  border-left: 3px solid var(--pink);
+  padding: 26px 0 26px 24px;
+}
+.principles li:last-child { border-bottom: 1px solid var(--rule); }
+.principles h3 { margin-bottom: 8px; font-family: "Bricolage Grotesque", sans-serif; font-style: italic; font-weight: 600; font-size: 1.25rem; }
+.principles p { margin-bottom: 0; color: var(--slate); }
+
+/* ---------- footer ---------- */
+
+footer.site {
+  padding: 44px var(--margin) 64px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  border-top: 1px solid var(--rule);
+  margin-top: 40px;
+  color: var(--slate);
+  font-size: 0.92rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+footer.site a { color: var(--slate); text-decoration-color: transparent; padding: 4px 0; display: inline-block; }
+footer.site a:hover { color: var(--pink); }
+footer.site .legal-links { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ---------- legal page typography ---------- */
+
+.legal h2 {
+  margin-top: 1.8em;
+  font-size: 1.15rem;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--pink);
+}
+.legal .updated { color: var(--slate); font-size: 0.9rem; margin-bottom: 2.5em; }
+.legal .draft-note {
+  border: 1px solid var(--rule);
+  padding: 16px 18px;
+  font-size: 0.92rem;
+  color: var(--slate);
+  margin-bottom: 2.5em;
+}
+.legal p, .legal li { color: var(--paper); }
+
+/* ---------- misc ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 13px 24px;
+  border: 1px solid var(--pink);
+  color: var(--pink);
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-top: 8px;
+  border-radius: 999px;
+}
+.btn:hover { background: var(--pink); color: var(--navy-deep); }
