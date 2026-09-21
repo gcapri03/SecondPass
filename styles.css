@@ -132,9 +132,10 @@ nav.site-nav a:hover, nav.site-nav a[aria-current="page"] { color: var(--color-h
 .name-hero {
   position: relative;
   display: inline-block;
+  white-space: nowrap;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(3.2rem, 13vw, 6.5rem);
+  font-size: clamp(2.6rem, 13vw, 6.5rem);
   line-height: 0.95;
   letter-spacing: -0.03em;
   margin: 0 0 1.15em;
