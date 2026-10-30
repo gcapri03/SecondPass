@@ -215,6 +215,8 @@ nav.site-nav a:hover, nav.site-nav a[aria-current="page"] { color: var(--color-h
 
 .hero .tagline em { font-style: normal; color: #FFFFFF; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.5); text-underline-offset: 4px; }
 
+.hero h1 { color: #FFFFFF; margin-bottom: 0.3em; }
+
 .hero .lede { font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); max-width: 52ch; }
 
 /* ---------- rule / section ---------- */
