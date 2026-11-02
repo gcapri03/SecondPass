@@ -3,13 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Second Pass">
+<meta property="og:title" content="Second Pass | A Software Studio">
+<meta property="og:description" content="Second Pass is a Miami-based software studio building small, focused apps. Our first app arrives in early 2027.">
+<meta property="og:url" content="https://secondpass.me/">
+<meta property="og:image" content="https://secondpass.me/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Second Pass | A Software Studio</title>
-<meta name="description" content="Second Pass is a Florida-based software studio building small, focused apps. Our first app is coming soon.">
+<meta name="description" content="Second Pass is a Miami-based software studio building small, focused apps. Our first app arrives in early 2027.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -17,8 +27,7 @@
   <a class="wordmark" href="index.html"><svg class="wordmark-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="M15 45 L85 45" fill="none" stroke="#69716B" stroke-width="6" stroke-linecap="round" stroke-opacity="0.6"/><path d="M32 78 L50 58 L68 78" fill="none" stroke="#17231D" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Second Pass</span></a>
   <nav class="site-nav">
     <a href="about.html">About</a>
-    <a href="privacy-policy.html">Privacy</a>
-    <a href="terms-of-service.html">Terms</a>
+    <a class="nav-cta" href="#notify">Get notified</a>
   </nav>
 </header>
 
@@ -37,22 +46,47 @@
   </div>
 </div>
 
-<hr class="rule">
+<section class="block" id="notify">
+  <h2>Our first app</h2>
+  <div class="app-teaser">
+    <figure class="teaser-visual" aria-hidden="true">
+      <div class="teaser-frame">
+        <div class="teaser-screen"></div>
+        <span class="teaser-cue"></span>
+      </div>
+      <figcaption>Still in its second pass.</figcaption>
+    </figure>
+    <div class="teaser-copy">
+      <p class="status">In development · Early 2027</p>
+      <h3>A quiet coach for how you come across on camera.</h3>
+      <p>For meetings, interviews, and the moments that count. It notices when you drift and gives you a discreet nudge to reset. What it sees never leaves your device.</p>
 
-<section class="block">
-  <h2>Our apps</h2>
-
-  <div class="log-item">
-    <div class="status">In development</div>
-    <div>
-      <h3>Our first app</h3>
-      <p>We're deep in development on our first release. It's built the way we build everything: focused, careful, and ready when it's ready.</p>
-      <a class="visit" href="mailto:hello@secondpass.me?subject=Notify%20me%20at%20launch&body=I'd%20like%20to%20be%20notified%20when%20your%20first%20app%20launches.">Get notified at launch</a>
+      <form class="notify-form" action="https://buttondown.com/api/emails/embed-subscribe/BUTTONDOWN_USERNAME" method="post" target="bd-frame">
+        <label for="notify-email" class="sr-only">Email address</label>
+        <input type="email" name="email" id="notify-email" placeholder="you@example.com" autocomplete="email" required>
+        <button type="submit" class="btn btn-dark">Get notified</button>
+        <p class="form-note">One email when it launches. Nothing else.</p>
+      </form>
+      <p class="form-thanks" role="status" hidden>You're on the list. Check your inbox to confirm.</p>
+      <iframe name="bd-frame" title="Signup" hidden></iframe>
     </div>
   </div>
 </section>
 
-<hr class="rule">
+<div class="mark-rule" aria-hidden="true"><svg viewBox="0 0 40 24"><path d="M8 20 L20 7 L32 20"/></svg></div>
+
+<section class="block">
+  <h2>What we cut</h2>
+  <p class="section-lede">Most of a second pass is taking things out. Here's what didn't make it into our first app, and why.</p>
+  <ul class="cut-list">
+    <li><s class="cut">Uploading your video to our servers</s><span class="why">Everything is processed on your device. There's nothing for us to store.</span></li>
+    <li><s class="cut">Pop-ups and banners mid-call</s><span class="why">A small marker you'll notice and no one else will.</span></li>
+    <li><s class="cut">Notification sounds</s><span class="why">In a meeting, silence is a feature.</span></li>
+    <li><s class="cut">A dashboard where your employer sees your activity</s><span class="why">Team plans show seats and billing. That's all.</span></li>
+  </ul>
+</section>
+
+<div class="mark-rule" aria-hidden="true"><svg viewBox="0 0 40 24"><path d="M8 20 L20 7 L32 20"/></svg></div>
 
 <section class="block">
   <h2>How we work</h2>
@@ -62,8 +96,8 @@
       <p>We'd rather ship something narrow and dependable than something broad and forgettable.</p>
     </li>
     <li>
-      <h3>We tell you what each app collects</h3>
-      <p>Some apps are built to keep everything on your device. Others may collect standard information, like account details or basic usage data, to work properly. Either way, each app's own privacy policy says exactly what it collects and why.</p>
+      <h3>Plain about your data</h3>
+      <p>If something can stay on your device, it does. When an app does need something from you, like an email for your account, its privacy policy says exactly what and why, in plain English.</p>
     </li>
     <li>
       <h3>Built to last a second look</h3>
@@ -81,6 +115,34 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  // Signup: posts to Buttondown in a hidden frame, then shows a thank-you.
+  // Until the Buttondown username is set, fall back to email.
+  var form = document.querySelector('.notify-form');
+  var thanks = document.querySelector('.form-thanks');
+  form.addEventListener('submit', function (e) {
+    var email = form.querySelector('input[type=email]').value;
+    if (form.action.indexOf('BUTTONDOWN_USERNAME') !== -1) {
+      e.preventDefault();
+      window.location.href = 'mailto:hello@secondpass.me?subject=Notify%20me%20at%20launch&body=' + encodeURIComponent('Please add ' + email + ' to the launch list.');
+      return;
+    }
+    setTimeout(function () { form.hidden = true; thanks.hidden = false; }, 300);
+  });
+
+  // "What we cut": strike each item through as it scrolls into view.
+  var items = document.querySelectorAll('.cut-list li');
+  if (!('IntersectionObserver' in window)) { items.forEach(function (li) { li.classList.add('is-cut'); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('is-cut'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.9 });
+  items.forEach(function (li, i) { li.style.transitionDelay = (i * 120) + 'ms'; io.observe(li); });
+})();
+</script>
 
 </body>
 </html>

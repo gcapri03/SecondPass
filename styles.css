@@ -335,3 +335,155 @@ footer.site .legal-links { display: flex; gap: 16px; flex-wrap: wrap; }
   transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
 }
 .btn:hover { border-color: var(--color-black); background: var(--color-black); color: #FFFFFF; }
+
+/* ===========================================================
+   v1.1 additions — teaser, signup, proof marks, header CTA
+   =========================================================== */
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* header: breathing room above the hero, nav aligned to the wordmark */
+header.site { align-items: center; padding-bottom: 28px; }
+nav.site-nav { align-items: center; gap: 22px; }
+nav.site-nav a.nav-cta {
+  color: var(--color-black);
+  font-weight: 600;
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-pill);
+  padding: 7px 16px;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+nav.site-nav a.nav-cta:hover { background: var(--color-black); border-color: var(--color-black); color: #FFFFFF; }
+
+/* proof-mark divider: a rule with an insertion caret */
+.mark-rule {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--margin);
+  position: relative;
+  height: 22px;
+}
+.mark-rule::before {
+  content: "";
+  position: absolute;
+  left: var(--margin); right: var(--margin); top: 0;
+  border-top: 1px solid var(--color-border);
+}
+.mark-rule svg {
+  position: absolute; top: 2px; left: var(--margin);
+  width: 30px; height: 18px; overflow: visible;
+}
+.mark-rule path {
+  fill: none; stroke: var(--color-hunter); stroke-width: 3;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+.section-lede { color: var(--color-text-secondary); margin-bottom: 1.6em; }
+
+/* first-app teaser */
+.app-teaser {
+  border-top: 1px solid var(--color-border);
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+@media (min-width: 720px) {
+  .app-teaser { grid-template-columns: 250px 1fr; gap: 36px; align-items: start; }
+}
+
+.teaser-visual { margin: 0; }
+.teaser-frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--color-hunter);
+  border-radius: 12px;
+  padding: 9px;
+  overflow: hidden;
+}
+.teaser-screen {
+  position: absolute; inset: 9px; border-radius: 6px; overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 40%, #A7B8A8 0 17%, transparent 18%),
+    radial-gradient(ellipse 46% 34% at 50% 100%, #8A9C8C 0 98%, transparent 100%),
+    linear-gradient(160deg, #4A6350, #2A3B30);
+  filter: blur(9px);
+  transform: scale(1.08);
+}
+.teaser-cue {
+  position: absolute; top: 20px; right: 20px;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #F3F4F0;
+  box-shadow: 0 0 0 4px rgba(243, 244, 240, 0.18);
+  animation: cue-pulse 3.2s ease-in-out infinite;
+}
+@keyframes cue-pulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+.teaser-visual figcaption {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.teaser-copy .status {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--color-forest); margin-bottom: 10px;
+}
+.teaser-copy h3 {
+  font-family: var(--font-display);
+  font-size: 1.45rem; line-height: 1.2; letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.teaser-copy > p { color: var(--color-text-secondary); }
+
+/* signup */
+.notify-form { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.notify-form input[type=email] {
+  flex: 1 1 220px; min-width: 0;
+  padding: 12px 14px;
+  font: inherit; font-size: 0.95rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+}
+.notify-form input[type=email]:focus { outline: 2px solid var(--color-hunter); outline-offset: 1px; border-color: var(--color-hunter); }
+.btn-dark { background: var(--color-black); border-color: var(--color-black); color: #FFFFFF; margin-top: 0; cursor: pointer; font-family: inherit; }
+.btn-dark:hover { background: var(--color-hunter); border-color: var(--color-hunter); }
+.form-note { flex-basis: 100%; font-size: 0.85rem; color: var(--color-text-muted); margin: 2px 0 0; }
+.form-thanks { margin-top: 20px; font-weight: 600; color: var(--color-hunter); }
+
+/* "What we cut" */
+.cut-list { list-style: none; margin: 0; padding: 0; }
+.cut-list li {
+  border-top: 1px solid var(--color-border);
+  padding: 20px 0;
+  display: grid; gap: 4px;
+}
+.cut-list .cut {
+  font-family: var(--font-display);
+  font-weight: 600; font-size: 1.15rem; letter-spacing: -0.01em;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  background-image: linear-gradient(var(--color-hunter), var(--color-hunter));
+  background-repeat: no-repeat;
+  background-position: 0 56%;
+  background-size: 100% 2.5px;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  transition: background-size 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  transition-delay: inherit;
+  justify-self: start;
+}
+.js .cut-list li:not(.is-cut) .cut { background-size: 0% 2.5px; }
+.cut-list .why { color: var(--color-text-secondary); font-size: 0.98rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .teaser-cue { animation: none; opacity: 1; }
+  .cut-list .cut { transition: none; }
+  .js .cut-list li:not(.is-cut) .cut { background-size: 100% 2.5px; }
+}
