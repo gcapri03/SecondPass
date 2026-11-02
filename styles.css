@@ -406,10 +406,7 @@ nav.site-nav a.nav-cta:hover { background: var(--color-black); border-color: var
 }
 .teaser-screen {
   position: absolute; inset: 9px; border-radius: 6px; overflow: hidden;
-  background:
-    radial-gradient(circle at 50% 40%, #A7B8A8 0 17%, transparent 18%),
-    radial-gradient(ellipse 46% 34% at 50% 100%, #8A9C8C 0 98%, transparent 100%),
-    linear-gradient(160deg, #4A6350, #2A3B30);
+  background: linear-gradient(160deg, #4A6350, #2A3B30);
   filter: blur(9px);
   transform: scale(1.08);
 }
@@ -440,6 +437,14 @@ nav.site-nav a.nav-cta:hover { background: var(--color-black); border-color: var
   margin-bottom: 10px;
 }
 .teaser-copy > p { color: var(--color-text-secondary); }
+
+/* the studio's caret, centered on the teaser: no hint of what the app does */
+.teaser-mark {
+  position: absolute; left: 50%; top: 50%; width: 64px; height: 38px;
+  transform: translate(-50%, -50%);
+  fill: none; stroke: #F3F4F0; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round;
+  opacity: 0.85;
+}
 
 /* signup */
 .notify-form { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }

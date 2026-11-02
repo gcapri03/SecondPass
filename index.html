@@ -6,7 +6,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Second Pass">
 <meta property="og:title" content="Second Pass | A Software Studio">
-<meta property="og:description" content="Second Pass is a Miami-based software studio building small, focused apps. Our first app arrives in early 2027.">
+<meta property="og:description" content="Second Pass is a Miami-based software studio building small, focused apps.">
 <meta property="og:url" content="https://secondpass.me/">
 <meta property="og:image" content="https://secondpass.me/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Second Pass | A Software Studio</title>
-<meta name="description" content="Second Pass is a Miami-based software studio building small, focused apps. Our first app arrives in early 2027.">
+<meta name="description" content="Second Pass is a Miami-based software studio building small, focused apps.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -52,14 +52,14 @@
     <figure class="teaser-visual" aria-hidden="true">
       <div class="teaser-frame">
         <div class="teaser-screen"></div>
-        <span class="teaser-cue"></span>
+        <svg class="teaser-mark" viewBox="0 0 40 24" aria-hidden="true"><path d="M8 20 L20 7 L32 20"/></svg>
       </div>
       <figcaption>Still in its second pass.</figcaption>
     </figure>
     <div class="teaser-copy">
-      <p class="status">In development · Early 2027</p>
-      <h3>A quiet coach for how you come across on camera.</h3>
-      <p>For meetings, interviews, and the moments that count. It notices when you drift and gives you a discreet nudge to reset. What it sees never leaves your device.</p>
+      <p class="status">In development</p>
+      <h3>Something worth the wait.</h3>
+      <p>We have been refining it for a long time, and we think it will earn its place in your day. Leave your email and we&rsquo;ll let you know the day it arrives.</p>
 
       <form class="notify-form" action="https://buttondown.com/api/emails/embed-subscribe/BUTTONDOWN_USERNAME" method="post" target="bd-frame">
         <label for="notify-email" class="sr-only">Email address</label>
@@ -71,19 +71,6 @@
       <iframe name="bd-frame" title="Signup" hidden></iframe>
     </div>
   </div>
-</section>
-
-<div class="mark-rule" aria-hidden="true"><svg viewBox="0 0 40 24"><path d="M8 20 L20 7 L32 20"/></svg></div>
-
-<section class="block">
-  <h2>What we cut</h2>
-  <p class="section-lede">Most of a second pass is taking things out. Here's what didn't make it into our first app, and why.</p>
-  <ul class="cut-list">
-    <li><s class="cut">Uploading your video to our servers</s><span class="why">Everything is processed on your device. There's nothing for us to store.</span></li>
-    <li><s class="cut">Pop-ups and banners mid-call</s><span class="why">A small marker you'll notice and no one else will.</span></li>
-    <li><s class="cut">Notification sounds</s><span class="why">In a meeting, silence is a feature.</span></li>
-    <li><s class="cut">A dashboard where your employer sees your activity</s><span class="why">Team plans show seats and billing. That's all.</span></li>
-  </ul>
 </section>
 
 <div class="mark-rule" aria-hidden="true"><svg viewBox="0 0 40 24"><path d="M8 20 L20 7 L32 20"/></svg></div>
@@ -132,15 +119,6 @@
     setTimeout(function () { form.hidden = true; thanks.hidden = false; }, 300);
   });
 
-  // "What we cut": strike each item through as it scrolls into view.
-  var items = document.querySelectorAll('.cut-list li');
-  if (!('IntersectionObserver' in window)) { items.forEach(function (li) { li.classList.add('is-cut'); }); return; }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (en.isIntersecting) { en.target.classList.add('is-cut'); io.unobserve(en.target); }
-    });
-  }, { threshold: 0.9 });
-  items.forEach(function (li, i) { li.style.transitionDelay = (i * 120) + 'ms'; io.observe(li); });
 })();
 </script>
 
