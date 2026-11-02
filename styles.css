@@ -175,21 +175,33 @@ nav.site-nav a:hover, nav.site-nav a[aria-current="page"] { color: var(--color-h
   fill: none;
   stroke: #FFFFFF;
   stroke-opacity: 0.55;
-  stroke-width: 6;
+  stroke-width: 10;
   stroke-linecap: round;
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
   animation: sp-draw 0.4s ease-out 1.25s forwards;
 }
 
-.name-hero .edit-overlay .caret {
+/* caret lives in its own uniformly scaled svg so it keeps the logo's 36:20 shape */
+.name-hero .edit-caret {
+  position: absolute;
+  left: 63.75%;
+  top: 0.8em;
+  width: 0.82em;
+  height: 0.492em;
+  transform: translateX(-50%);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.name-hero .edit-caret path {
   fill: none;
   stroke: var(--color-hunter);
-  stroke-width: 9;
+  stroke-width: 5;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-dasharray: 158;
-  stroke-dashoffset: 158;
+  stroke-dasharray: 54;
+  stroke-dashoffset: 54;
   animation: sp-draw 0.35s cubic-bezier(0.65, 0, 0.35, 1) 1.65s forwards;
 }
 
@@ -199,7 +211,7 @@ nav.site-nav a:hover, nav.site-nav a[aria-current="page"] { color: var(--color-h
 
 @media (prefers-reduced-motion: reduce) {
   .name-hero .edit-overlay .strike,
-  .name-hero .edit-overlay .caret {
+  .name-hero .edit-caret path {
     animation: none;
     stroke-dashoffset: 0;
   }
