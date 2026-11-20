@@ -29,7 +29,7 @@
   <a class="wordmark" href="index.html"><svg class="wordmark-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="M15 45 L85 45" fill="none" stroke="#69716B" stroke-width="6" stroke-linecap="round" stroke-opacity="0.6"/><path d="M32 78 L50 58 L68 78" fill="none" stroke="#17231D" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Second Pass</span></a>
   <nav class="site-nav">
     <a href="about.html">About</a>
-    <a class="nav-cta" href="#notify">Get notified</a>
+    <a class="nav-cta" href="#notify">Our first app</a>
   </nav>
 </header>
 
@@ -61,16 +61,8 @@
     <div class="teaser-copy">
       <p class="status">In development</p>
       <h3>Something worth the wait.</h3>
-      <p>We have been refining it for a long time, and we think it will earn its place in your day. Leave your email and we&rsquo;ll let you know the day it arrives.</p>
+      <p>We have been refining it for a long time, and we think it will earn its place in your day. Check back soon.</p>
 
-      <form class="notify-form" action="https://buttondown.com/api/emails/embed-subscribe/BUTTONDOWN_USERNAME" method="post" target="bd-frame">
-        <label for="notify-email" class="sr-only">Email address</label>
-        <input type="email" name="email" id="notify-email" placeholder="you@example.com" autocomplete="email" required>
-        <button type="submit" class="btn btn-dark">Get notified</button>
-        <p class="form-note">We'll email you when it launches.</p>
-      </form>
-      <p class="form-thanks" role="status" hidden>You're on the list. Check your inbox to confirm.</p>
-      <iframe name="bd-frame" title="Signup" hidden></iframe>
     </div>
   </div>
 </section>
@@ -105,24 +97,6 @@
   </div>
 </footer>
 
-<script>
-(function () {
-  // Signup: posts to Buttondown in a hidden frame, then shows a thank-you.
-  // Until the Buttondown username is set, fall back to email.
-  var form = document.querySelector('.notify-form');
-  var thanks = document.querySelector('.form-thanks');
-  form.addEventListener('submit', function (e) {
-    var email = form.querySelector('input[type=email]').value;
-    if (form.action.indexOf('BUTTONDOWN_USERNAME') !== -1) {
-      e.preventDefault();
-      window.location.href = 'mailto:hello@secondpass.me?subject=Notify%20me%20at%20launch&body=' + encodeURIComponent('Please add ' + email + ' to the launch list.');
-      return;
-    }
-    setTimeout(function () { form.hidden = true; thanks.hidden = false; }, 300);
-  });
-
-})();
-</script>
 
 </body>
 </html>
