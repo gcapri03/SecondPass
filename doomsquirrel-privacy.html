@@ -42,7 +42,7 @@
 </div>
 
 <section class="block legal">
-  <p class="updated">Last updated: November 17, 2026</p>
+  <p class="updated">Last updated: November 21, 2026</p>
 
   <p>DoomSquirrel is a game by Second Pass LLC ("Second Pass," "we," "us"). You memorize a picture, scroll a feed, and tap the match as fast as you can. We built it to be fun first, so we keep what we collect small. This policy explains what the game collects, why, who helps us run it, and the choices you have. It adds detail to our <a href="privacy-policy.html">company privacy policy</a>; for DoomSquirrel, this page is the one that applies. Your use of the game is also governed by our <a href="terms-of-service.html">Terms of Service</a>.</p>
 
@@ -51,20 +51,25 @@
     <li>You don't need to create an account or give us your email to play.</li>
     <li>Your stars, best times and settings stay on your phone.</li>
     <li>If you play friend challenges, we store the name you pick and your times so friends can see the leaderboard.</li>
+    <li>Players you've challenged, or who challenged you, become friends in the game, so their new challenges can show up for you without a text. You can remove a friend anytime.</li>
+    <li>Reminders are optional and scheduled on your phone. We don't send push notifications.</li>
     <li>The game shows ads from Google AdMob, which collects information about your device to show and measure ads. You decide whether ads can be personalized.</li>
     <li>Purchases go through Apple, which handles your payment details; we don't receive them.</li>
     <li>We don't sell your personal information for money. Some state laws treat sharing data with ad partners for personalized ads as a "sale" or "sharing," and you can opt out of that, as explained below.</li>
   </ul>
 
   <h2>What stays on your phone</h2>
-  <p>Your star balance, best times, chosen level and picture pack, packs you unlocked with stars, and the name you chose are saved on your device rather than on our servers. Deleting the app deletes them from your device.</p>
+  <p>Your star balance, best times, chosen level and picture pack, packs you unlocked with stars, the name you chose, your My challenges list, the players you've hidden or removed, and whether reminders are on are saved on your device rather than on our servers. Deleting the app deletes them from your device.</p>
 
   <h2>What we collect, and why</h2>
   <p><strong>A random player ID.</strong> When you first open the game, it signs you in anonymously using Google Firebase. This creates a random ID that isn't linked to your name, email or phone number. We use it so the game can tell your challenge times and votes apart from everyone else's.</p>
   <p><strong>Friend challenges.</strong> If you create or join a challenge, we store the name you chose (up to 16 characters), the challenge code, the level and picture pack, and your result: your time, wrong taps, stars, and when you started and finished. Anyone with the challenge code can see the names, times and stars on that leaderboard. Please don't use your full name or anything private as your player name.</p>
+  <p><strong>Friends and your challenge inbox.</strong> When you play someone's challenge, or someone plays yours, the game adds them to your friends list so you can see their new challenges without needing a text. Your friends list stores each friend's random player ID, their player name, the challenge that connected you, and when. When you create a challenge, the game places a copy (the code, level, picture pack, your player name and when) in each friend's challenge inbox. Only you can see your friends list and your inbox. Only players on your friends list can add challenges to your inbox, and removing or hiding a player stops their new challenges from reaching you.</p>
+  <p><strong>New result notes.</strong> When you finish a friend's challenge, the game leaves the person who created it a short note (the challenge code, your random player ID, your player name and when), so their home screen can show that there are new results. Only that person can see it, and it's cleared when they open the leaderboard.</p>
+  <p><strong>Reminders.</strong> If you turn on reminders, your phone schedules a notification about challenges waiting for you, at most one a day. It's created on your phone from what the game already knows, so we don't receive a notification token or send anything from our servers. You can turn reminders off in My challenges or in your iPhone's Settings.</p>
   <p><strong>Name reports.</strong> If you report another player's name as inappropriate, we store your random player ID, the reported player's ID and name, the challenge code, and when you sent it, so we can review the report and rename or remove the name. Player names are also checked against a filter for offensive words on your device before they're used.</p>
   <p><strong>Pack votes.</strong> If you vote for a future picture pack, we store which packs you voted for, linked to your random player ID, so we can count votes and you can change yours.</p>
-  <p><strong>Technical information.</strong> Like any online service, Firebase receives your IP address and basic device information when the game connects to it, to deliver the service and keep it secure.</p>
+  <p><strong>Technical information.</strong> Like any online service, Firebase receives your IP address and basic device information when the game connects to it, to deliver the service and keep it secure. To help block fake copies of the game and automated abuse, the game uses Firebase App Check with Apple's DeviceCheck, which sends a token that confirms the request comes from the real app on a real Apple device. This token isn't used to identify you.</p>
   <p><strong>Purchases.</strong> If you buy a picture pack, Apple processes the payment. Our purchase service, RevenueCat, receives a record of what you bought, your Apple receipt, and a random ID so it can unlock the pack and restore it later. We don't receive your card or bank details.</p>
   <p><strong>Advertising.</strong> DoomSquirrel shows banner ads on menus, a full-screen ad every few rounds, and optional video ads you can watch for bonus stars. These come from Google AdMob. Google may collect your device's advertising identifier (if you allow tracking; otherwise your iPhone withholds it), your IP address and the approximate location it implies, your device type and settings, and how you interact with ads. Google uses this to show ads, limit how often you see the same one, measure results and prevent fraud. DoomSquirrel doesn't ask for access to your device's location (GPS), so the game doesn't provide your precise location to us or our ad partners. Google and its ad partners may estimate your approximate location (such as your city or region) from your IP address. If you're shown Google's consent message, any choice it offers about precise geolocation applies to data partners may have from other sources, not from DoomSquirrel. How Google handles this data is described at <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
 
@@ -79,24 +84,24 @@
   <h2>Who helps us run DoomSquirrel</h2>
   <p>We share information with the companies that run parts of the game for us, for that purpose:</p>
   <ul>
-    <li><strong>Google Firebase</strong> for anonymous sign-in and storing challenge results and votes.</li>
+    <li><strong>Google Firebase</strong> for anonymous sign-in, storing challenge results, friends lists, challenge inboxes and votes, and checking that requests come from the real app.</li>
     <li><strong>Google AdMob</strong> for ads, as described above.</li>
     <li><strong>RevenueCat</strong> for confirming and restoring purchases.</li>
-    <li><strong>Apple</strong> for payments, app delivery, and crash reports if you've chosen to share them with developers.</li>
+    <li><strong>Apple</strong> for payments, app delivery, device checks (DeviceCheck), and crash reports if you've chosen to share them with developers.</li>
   </ul>
-  <p>Other players can see your player name, times and stars on the leaderboard of any challenge you join. We may also share information if the law requires it, to protect the rights and safety of players, Second Pass, or others, to prevent fraud or abuse, or as part of a merger, acquisition, or sale of all or part of our business, subject to this policy.</p>
+  <p>Other players can see your player name, times and stars on the leaderboard of any challenge you join. Your friends in the game can also see your player name on challenges you send them and when you finish theirs. We may also share information if the law requires it, to protect the rights and safety of players, Second Pass, or others, to prevent fraud or abuse, or as part of a merger, acquisition, or sale of all or part of our business, subject to this policy.</p>
 
   <h2>How long we keep it</h2>
-  <p>We keep challenge results and votes while DoomSquirrel is running, so leaderboards keep working, unless you ask us to delete them sooner. We keep name reports as long as needed to review them and prevent abuse. Purchase records are kept as long as needed to restore purchases and meet tax and accounting rules. Information on your phone is removed when you delete the app.</p>
+  <p>We keep challenge results and votes while DoomSquirrel is running, so leaderboards keep working, unless you ask us to delete them sooner. Friends stay on your list until you remove them or ask us to delete them. Challenges in your inbox are removed once you play them; the game only shows ones from the last 14 days, and we may delete older ones. New result notes are removed when you open that challenge's leaderboard. We keep name reports as long as needed to review them and prevent abuse. Purchase records are kept as long as needed to restore purchases and meet tax and accounting rules. Information on your phone is removed when you delete the app.</p>
 
   <h2>Your rights</h2>
-  <p>You can ask us what we hold about you, ask us to correct it, or ask us to delete it. Because you play without an account, we can't look you up by name. When you write to us, include the challenge codes you played and the player name you used, and we'll find your results and remove them. We may ask for details like these to confirm the request is yours. Depending on where you live, you may have other rights under local law, such as opting out of targeted advertising; we'll honor them as the law requires, and using them won't affect how we treat you, except as the law allows. Write to <a href="mailto:hello@secondpass.me">hello@secondpass.me</a>.</p>
+  <p>You can ask us what we hold about you, ask us to correct it, or ask us to delete it. Because you play without an account, we can't look you up by name. When you write to us, include the challenge codes you played and the player name you used, and we'll find your results, friends list and inbox and remove them. We may ask for details like these to confirm the request is yours. Depending on where you live, you may have other rights under local law, such as opting out of targeted advertising; we'll honor them as the law requires, and using them won't affect how we treat you, except as the law allows. Write to <a href="mailto:hello@secondpass.me">hello@secondpass.me</a>.</p>
 
   <h2>Children</h2>
   <p>DoomSquirrel is made for a general audience and isn't directed to children under 13. We don't knowingly collect personal information from children under 13. If you believe a child has shared information with us, contact us and we'll delete it.</p>
 
   <h2>Keeping it safe</h2>
-  <p>Data sent from the game is encrypted on its way to our service providers, and our database rules limit each player to changing only their own results and votes. We use reasonable measures to protect your information, but no system is completely secure, so we can't guarantee absolute security.</p>
+  <p>Data sent from the game is encrypted on its way to our service providers, and our database rules limit each player to changing only their own results, votes and friends list, and allow only your friends to add challenges to your inbox. We use reasonable measures to protect your information, but no system is completely secure, so we can't guarantee absolute security.</p>
 
   <h2>Where it's stored</h2>
   <p>Second Pass is based in the United States, and our service providers may store and process information in the United States and other countries.</p>
