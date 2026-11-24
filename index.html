@@ -6,86 +6,144 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Second Pass">
 <meta property="og:title" content="Second Pass | A Software Studio">
-<meta property="og:description" content="Second Pass is a Miami-based software studio building small, focused apps.">
+<meta property="og:description" content="Second Pass is a Miami-based software studio making games, tools and other small apps.">
 <meta property="og:url" content="https://secondpass.me/">
-<meta property="og:image" content="https://secondpass.me/og-image.png">
+<meta property="og:image" content="https://secondpass.me/og-image.png?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2">
-<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+<meta property="og:image:alt" content="Second Pass logo with the line One studio. All kinds of apps., beside tiles for DoomSquirrel and Terevu.">
+<link rel="canonical" href="https://secondpass.me/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://secondpass.me/#org",
+      "name": "Second Pass",
+      "legalName": "Second Pass LLC",
+      "url": "https://secondpass.me/",
+      "logo": "https://secondpass.me/apple-touch-icon.png",
+      "email": "hello@secondpass.me",
+      "address": { "@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://secondpass.me/#site",
+      "url": "https://secondpass.me/",
+      "name": "Second Pass",
+      "publisher": { "@id": "https://secondpass.me/#org" }
+    }
+  ]
+}
+</script>
+<meta name="theme-color" content="#121212">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 <title>Second Pass | A Software Studio</title>
-<meta name="description" content="Second Pass is a Miami-based software studio building small, focused apps.">
+<meta name="description" content="Second Pass is a Miami-based software studio making games, tools and other small apps.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2">
-<script>document.documentElement.classList.add('js');</script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@400;600;700&family=Bungee&family=Sora:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
 <header class="site">
-  <a class="wordmark" href="index.html"><svg class="wordmark-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="M15 45 L85 45" fill="none" stroke="#69716B" stroke-width="6" stroke-linecap="round" stroke-opacity="0.6"/><path d="M32 78 L50 58 L68 78" fill="none" stroke="#17231D" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Second Pass</span></a>
-  <nav class="site-nav">
+  <a class="wordmark" href="index.html"><svg class="wordmark-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="M12 30 L88 30" fill="none" stroke="#FF4FA3" stroke-width="11" stroke-linecap="round"/><path d="M25 82 L50 54 L75 82" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Second Pass</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="#apps">Apps</a>
     <a href="about.html">About</a>
-    <a class="nav-cta" href="#notify">Our first app</a>
+    <a class="nav-cta" href="https://apps.apple.com/app/id6830947464">Play DoomSquirrel</a>
   </nav>
 </header>
 
-<div class="hero">
-  <div class="wrap">
-    <p class="eyebrow">A software studio</p>
-    <h1 class="name-hero" aria-label="Second Pass">
-      <span class="letter" aria-hidden="true" style="animation-delay:0.64s">S</span><span class="letter" aria-hidden="true" style="animation-delay:0.58s">e</span><span class="letter" aria-hidden="true" style="animation-delay:0.52s">c</span><span class="letter" aria-hidden="true" style="animation-delay:0.46s">o</span><span class="letter" aria-hidden="true" style="animation-delay:0.40s">n</span><span class="letter" aria-hidden="true" style="animation-delay:0.34s">d</span> <span class="letter" aria-hidden="true" style="animation-delay:0.28s">P</span><span class="letter" aria-hidden="true" style="animation-delay:0.22s">a</span><span class="letter" aria-hidden="true" style="animation-delay:0.16s">s</span><span class="letter" aria-hidden="true" style="animation-delay:0.10s">s</span>
-      <svg class="edit-overlay" viewBox="0 0 400 140" preserveAspectRatio="none" aria-hidden="true">
-        <path class="strike" d="M0 85 L400 85"/>
-      </svg>
-      <svg class="edit-caret" viewBox="0 0 40 24" width="0" height="0" aria-hidden="true"><path d="M2 22 L20 2 L38 22" fill="none"/></svg>
-    </h1>
-    <p class="tagline">Good software takes a <em>second pass</em>.</p>
-    <p class="lede">We build small, focused apps, the kind you'd expect a careful editor to have made. We aim not to ship until it's earned the name.</p>
-  </div>
-</div>
+<main class="worlds" id="apps">
 
-<section class="block" id="notify">
-  <h2>Our first app</h2>
-  <div class="app-teaser">
-    <figure class="teaser-visual" aria-hidden="true">
-      <div class="teaser-frame">
-        <div class="teaser-screen"></div>
-        <svg class="teaser-mark" viewBox="0 0 40 24" aria-hidden="true"><path d="M8 20 L20 7 L32 20"/></svg>
+  <div class="row">
+    <section class="tile tile-hero" aria-labelledby="hero-h">
+      <div class="top">
+        <p class="eyebrow">A software studio · Miami</p>
+        <svg class="big-mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M12 30 L88 30" fill="none" stroke="#FF4FA3" stroke-width="9" stroke-linecap="round"/><path d="M25 82 L50 54 L75 82" fill="none" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
-      <figcaption>Still in its second pass.</figcaption>
-    </figure>
-    <div class="teaser-copy">
-      <p class="status">In development</p>
-      <h3>Something worth the wait.</h3>
-      <p>We have been refining it for a long time, and we think it will earn its place in your day. Check back soon.</p>
+      <h1 id="hero-h">One studio.<br>All kinds<br>of <span>apps.</span></h1>
+      <p class="lede">Each Second Pass app gets its own world, with its own look and its own voice. What they share is the care that goes into them.</p>
+    </section>
 
+    <section class="tile tile-doom" aria-labelledby="doom-h">
+      <span class="kicker">Game · iPhone &amp; iPad</span>
+      <img class="app-icon" src="images/doomsquirrel-icon.png" alt="" width="250" height="250">
+      <div class="body">
+        <h2 id="doom-h">Doom<br>Squirrel</h2>
+        <p>Memorize a picture, scroll the feed, tap the match. Faster finds earn stars.</p>
+        <a class="play" href="https://apps.apple.com/app/id6830947464">Play on the App Store →</a>
+        <div class="small-links">
+          <a href="doomsquirrel-support.html">Support</a>
+          <a href="doomsquirrel-privacy.html">Privacy</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="row">
+    <a class="tile tile-terevu" href="#contact">
+      <div class="status-row"><span class="pill-soon">Coming soon</span></div>
+      <div>
+        <h2>Tere<span>vu</span></h2>
+        <div class="rule-short"></div>
+      </div>
+      <span class="cta">Ask us about it →</span>
+    </a>
+
+    <a class="tile tile-next" href="#contact">
+      <span class="kicker">Next world</span>
+      <h2 aria-hidden="true">???</h2>
+      <p>Still in its second pass. Game? Tool? Stay tuned.</p>
+    </a>
+
+    <div class="tile tile-range">
+      <span class="kicker">The range</span>
+      <ul>
+        <li>Games</li>
+        <li>Tools</li>
+        <li>Experiments</li>
+        <li class="muted">&amp; whatever's next</li>
+      </ul>
     </div>
   </div>
-</section>
 
-<div class="mark-rule" aria-hidden="true"></div>
+  <div class="row">
+    <section class="tile tile-rules" aria-labelledby="rules-h">
+      <h2 id="rules-h">How we work</h2>
+      <div>
+        <p class="num">01</p>
+        <h3>One app, one job</h3>
+        <p>Narrow and dependable over broad and forgettable.</p>
+      </div>
+      <div>
+        <p class="num">02</p>
+        <h3>Plain about your data</h3>
+        <p>Each app works differently. Some show ads, some keep your data on your device. Each one has its own privacy page that says what it collects and why, in plain English.</p>
+      </div>
+      <div>
+        <p class="num">03</p>
+        <h3>Built for a second look</h3>
+        <p>Would a careful person be comfortable examining it closely? That's the bar.</p>
+      </div>
+    </section>
 
-<section class="block">
-  <h2>How we work</h2>
-  <ul class="principles">
-    <li>
-      <h3>One app, one job</h3>
-      <p>We'd rather ship something narrow and dependable than something broad and forgettable.</p>
-    </li>
-    <li>
-      <h3>Plain about your data</h3>
-      <p>When something can stay on your device, we aim to keep it there. When an app does need something from you, like an email for your account, its privacy policy explains what and why, in plain English.</p>
-    </li>
-    <li>
-      <h3>Built to last a second look</h3>
-      <p>We aim to hold each release to the same standard: would we be comfortable if a careful person examined it closely? That's the bar, not the finish line.</p>
-    </li>
-  </ul>
-</section>
+    <section class="tile tile-notify" id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Say hello.</h2>
+      <div>
+        <p class="contact-copy">Questions, ideas, or a bug to report? We'd love to hear from you.</p>
+        <a class="contact-btn" href="mailto:hello@secondpass.me">hello@secondpass.me</a>
+      </div>
+    </section>
+  </div>
+
+</main>
 
 <footer class="site">
   <div class="wrap">
